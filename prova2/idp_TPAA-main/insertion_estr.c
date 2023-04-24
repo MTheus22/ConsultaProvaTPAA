@@ -1,3 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h> 
+
+typedef struct aluno{
+    int matricula; 
+    char nome[50];
+    float media;
+    struct aluno *prox;
+    struct aluno *ant;
+}Aluno;
+
+typedef struct lista {
+    Aluno *inicio;
+    int tamanho;
+} ListaAlunos;
+
+
 void insertionSort(ListaAlunos* lista) {
     Aluno* atual = lista->inicio;
     while (atual != NULL) {
